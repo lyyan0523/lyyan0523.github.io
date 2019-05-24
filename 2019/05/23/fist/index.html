@@ -21,8 +21,8 @@
     <meta name="keywords" content="杂七杂八">
 
 
-    <meta name="description" content="从来没弄过博客这类东西，平时比较懒，也没有太多写日记写文章的习惯，不过第一天弄好博客（其实差的还多也就是借了别人的框架。。。。。。博客外观美化和功能优化在慢慢搞吧）怎么也需要写点啥。
-这个博客是...">
+    <meta name="description" content="刚刚搭建好自己的博客，是在win10下利用github+hexo搭建的，虽然网上有很多类似的教程，不过自己决定还是记录下自己的博客搭建过程以及遇到的问题和解决方法。
+第一步：下载并安装Node....">
 
 
 
@@ -173,9 +173,29 @@
     </div>
     
     <div class="post-body post-content">
-        <p>从来没弄过博客这类东西，平时比较懒，也没有太多写日记写文章的习惯，不过第一天弄好博客（其实差的还多也就是借了别人的框架。。。。。。博客外观美化和功能优化在慢慢搞吧）怎么也需要写点啥。</p>
-<p>这个博客是用HITHUB和HEXO搭建的，其实搭建前我还是比较小白的，搭建的过程中顺便增加了对HITHUB和HEXO的了解，目前的理解就是HEXO是一个博客模版框架，然后本地弄好后发布到HITHUB上，这样别人就可以看到自己的博客了。至于具体怎么搭建怎么配置网上教程大把也就不在此多说了。主要说下自己遇到的问题和解决方法。首先是修改配置文件的时候“：”后面要有一个空格，如果连着写就会报错。 其次就是在执行hexo -d遇到error: src refspec HEAD does not match any error: failed to push some refs to <a href="mailto:&#39;git@github.com" target="_blank" rel="noopener">&#39;git@github.com</a>:lyyan0523/lyyan0523.github.io.git’这个错误提示，百度了好多帖子也没有解决。最后发现是需要回到本地Hexo仓库。然后用命令git config –global 来设置用户名和邮箱。然后就可以顺利hexo -d了。其他的问题倒是基本没遇到，搭建得还算顺利。发现自己也没写出来啥干货~~~~</p>
-<p>既然有了博客了以后就没事来这边写点啥，这个博客会一直更新下去的，在这里给自己再加加油~~！！！好好学习天天向上= 。=</p>
+        <p>刚刚搭建好自己的博客，是在win10下利用github+hexo搭建的，虽然网上有很多类似的教程，不过自己决定还是记录下自己的博客搭建过程以及遇到的问题和解决方法。</p>
+<h1 id="第一步：下载并安装Node-js和git"><a href="#第一步：下载并安装Node-js和git" class="headerlink" title="第一步：下载并安装Node.js和git"></a>第一步：下载并安装Node.js和git</h1><p>首先把下载地址给大家提供出来方便朋友们下载。<br><strong>Node.js下载地址：<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a></strong><br><strong>Git下载地址：<a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></strong><br>安装这两个软件很简单，下载后无脑下一步（next）就可以。</p>
+<h1 id="第二步：安装配置Hexo"><a href="#第二步：安装配置Hexo" class="headerlink" title="第二步：安装配置Hexo"></a>第二步：安装配置Hexo</h1><p>安装好node.js和git后就可以开始安装配置hexo了<br>在任意磁盘新建一个文件夹用来存放Hexo博客内容。我是创建了一个名为blog的文件夹，创建好文件夹后点击鼠标右键选择git bash here。弹出命令输入框后写入以下命令<br><code>cnpm install -g hexo-cli</code><br><code>hexo init</code><br>第一步是下载hexo，第二步是初始化hexo，这两步完成后文件夹就会自动生成hexo的文件</p>
+<h1 id="第三步：将Hexo部署到Github"><a href="#第三步：将Hexo部署到Github" class="headerlink" title="第三步：将Hexo部署到Github"></a>第三步：将Hexo部署到Github</h1><h3 id="1-登录github官网登录自己的账户，没有的话申请一个帐号然后登陆"><a href="#1-登录github官网登录自己的账户，没有的话申请一个帐号然后登陆" class="headerlink" title="1.登录github官网登录自己的账户，没有的话申请一个帐号然后登陆"></a>1.登录github官网登录自己的账户，没有的话申请一个帐号然后登陆</h3><p>官网地址：<a href="https://github.com" target="_blank" rel="noopener">https://github.com</a></p>
+<h3 id="2-登录后新建一个仓库"><a href="#2-登录后新建一个仓库" class="headerlink" title="2.登录后新建一个仓库"></a>2.登录后新建一个仓库</h3><p>create a repository</p>
+<p>注意仓库名和用户名要一致，如我的用户名为lyyan0523,则仓库名为lyyan0523.github.io.<br>创建的同时勾选下面的Initialize this repository with a README</p>
+<h3 id="3-修改Hexo的配置文件"><a href="#3-修改Hexo的配置文件" class="headerlink" title="3.修改Hexo的配置文件"></a>3.修改Hexo的配置文件</h3><p>在Hexo中打开_config.yml配置文件，有两处需要修改，对应代码如下。注意：后面一定要加空格！！！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: LYBlog</span><br><span class="line">subtitle:</span><br><span class="line">description:</span><br><span class="line">keywords:</span><br><span class="line">author: LY</span><br><span class="line">language: zh-Hans</span><br><span class="line">timezone:</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">`deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:lyyan0523/lyyan0523.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<h3 id="4-安装hexo-deployer-git插件"><a href="#4-安装hexo-deployer-git插件" class="headerlink" title="4.安装hexo-deployer-git插件"></a>4.安装hexo-deployer-git插件</h3><p><code>cnpm install --save hexo-deployer-git</code>，</p>
+<h3 id="5-配置ssh"><a href="#5-配置ssh" class="headerlink" title="5.配置ssh"></a>5.配置ssh</h3><p>先回到本地Hexo仓库设置用户名和邮箱，代码如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name “github注册名”</span><br><span class="line">git config --global user.email “github注册邮箱”</span><br></pre></td></tr></table></figure>
+<p>有两种连接方式https和ssh，ssh输入一次用户名和密码后以后就不需要再次输入了。</p>
+<p>在当前用户目录下写入以下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C</span><br></pre></td></tr></table></figure>
+<p>输入后一直按回车跳过输入密码等操作，然后将生成的密钥放到github网站里面（在setting里面找到SSH and GPG keys然后把密钥粘贴进去）</p>
+<p>然后测试和github的连接是否通常，代码如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<h3 id="6-即将大功告成"><a href="#6-即将大功告成" class="headerlink" title="6.即将大功告成"></a>6.即将大功告成</h3><p>输入以下命令</p>
+<p>server clean</p>
+<p>server g</p>
+<p>server d</p>
+<p>然后在浏览器中打开https://用户名.github.io/就可以看到自己的博客了。有的时候上传到github会有一点延迟。</p>
 
     </div>
     
@@ -234,7 +254,7 @@
     <div class="widget">
         <h3 class="title">Table of Contents</h3>
         
-            <p>暂无目录</p>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#第一步：下载并安装Node-js和git"><span class="toc-text">第一步：下载并安装Node.js和git</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第二步：安装配置Hexo"><span class="toc-text">第二步：安装配置Hexo</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第三步：将Hexo部署到Github"><span class="toc-text">第三步：将Hexo部署到Github</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-登录github官网登录自己的账户，没有的话申请一个帐号然后登陆"><span class="toc-text">1.登录github官网登录自己的账户，没有的话申请一个帐号然后登陆</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-登录后新建一个仓库"><span class="toc-text">2.登录后新建一个仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-修改Hexo的配置文件"><span class="toc-text">3.修改Hexo的配置文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-安装hexo-deployer-git插件"><span class="toc-text">4.安装hexo-deployer-git插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-配置ssh"><span class="toc-text">5.配置ssh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-即将大功告成"><span class="toc-text">6.即将大功告成</span></a></li></ol></li></ol>
         
     </div>
 </aside>
