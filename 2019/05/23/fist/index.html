@@ -1,0 +1,317 @@
+<!DOCTYPE HTML>
+<html lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="LYBlog">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="theme-version" content="1.2.1">
+    <meta name="root" content="/">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+    <meta name="keywords" content="杂七杂八">
+
+
+    <meta name="description" content="刚刚搭建好自己的博客，是在win10下利用github+hexo搭建的，虽然网上有很多类似的教程，不过自己决定还是记录下自己的博客搭建过程以及遇到的问题和解决方法。
+第一步：下载并安装Node....">
+
+
+
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+
+    <!--Title-->
+
+
+<title>记录下自己博客的搭建过程 | LYBlog</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="LYBlog" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+
+</head>
+
+</html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header" style="background-image:url(http://snippet.shenliyang.com/img/banner.jpg)">
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="LY">
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                 <img src="/img/branding.png" alt="Snippet 博客主题" class="img-responsive center-block">
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">LYBlog</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>主页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>生活随笔</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/技术心得/"><i class="fa "></i>技术心得</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/tags/学习成长之路/"><i class="fa "></i>学习成长之路</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="记录下自己博客的搭建过程">
+            
+	            记录下自己博客的搭建过程
+            
+        </h1>
+        <div class="post-meta">
+    
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            <a class="category-link" href="/categories/技术心得/">技术心得</a>
+        </span>
+    
+
+    
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/杂七杂八/">杂七杂八</a>
+                
+            </span>
+        </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2019/05/23</span>
+        </span>
+        
+    
+</div>
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <p>刚刚搭建好自己的博客，是在win10下利用github+hexo搭建的，虽然网上有很多类似的教程，不过自己决定还是记录下自己的博客搭建过程以及遇到的问题和解决方法。</p>
+<h1 id="第一步：下载并安装Node-js和git"><a href="#第一步：下载并安装Node-js和git" class="headerlink" title="第一步：下载并安装Node.js和git"></a>第一步：下载并安装Node.js和git</h1><p>首先把下载地址给大家提供出来方便朋友们下载。<br><strong>Node.js下载地址：<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a></strong><br><strong>Git下载地址：<a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></strong><br>安装这两个软件很简单，下载后无脑下一步（next）就可以。</p>
+<h1 id="第二步：安装配置Hexo"><a href="#第二步：安装配置Hexo" class="headerlink" title="第二步：安装配置Hexo"></a>第二步：安装配置Hexo</h1><p>安装好node.js和git后就可以开始安装配置hexo了<br>在任意磁盘新建一个文件夹用来存放Hexo博客内容。我是创建了一个名为blog的文件夹，创建好文件夹后点击鼠标右键选择git bash here。弹出命令输入框后写入以下命令<br><code>cnpm install -g hexo-cli</code><br><code>hexo init</code><br>第一步是下载hexo，第二步是初始化hexo，这两步完成后文件夹就会自动生成hexo的文件</p>
+<h1 id="第三步：将Hexo部署到Github"><a href="#第三步：将Hexo部署到Github" class="headerlink" title="第三步：将Hexo部署到Github"></a>第三步：将Hexo部署到Github</h1><h3 id="1-登录github官网登录自己的账户，没有的话申请一个帐号然后登陆"><a href="#1-登录github官网登录自己的账户，没有的话申请一个帐号然后登陆" class="headerlink" title="1.登录github官网登录自己的账户，没有的话申请一个帐号然后登陆"></a>1.登录github官网登录自己的账户，没有的话申请一个帐号然后登陆</h3><p>官网地址：<a href="https://github.com" target="_blank" rel="noopener">https://github.com</a></p>
+<h3 id="2-登录后新建一个仓库"><a href="#2-登录后新建一个仓库" class="headerlink" title="2.登录后新建一个仓库"></a>2.登录后新建一个仓库</h3><p>create a repository</p>
+<p>注意仓库名和用户名要一致，如我的用户名为lyyan0523,则仓库名为lyyan0523.github.io.<br>创建的同时勾选下面的Initialize this repository with a README</p>
+<h3 id="3-修改Hexo的配置文件"><a href="#3-修改Hexo的配置文件" class="headerlink" title="3.修改Hexo的配置文件"></a>3.修改Hexo的配置文件</h3><p>在Hexo中打开_config.yml配置文件，有两处需要修改，对应代码如下。注意：后面一定要加空格！！！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: LYBlog</span><br><span class="line">subtitle:</span><br><span class="line">description:</span><br><span class="line">keywords:</span><br><span class="line">author: LY</span><br><span class="line">language: zh-Hans</span><br><span class="line">timezone:</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">`deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:lyyan0523/lyyan0523.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<h3 id="4-安装hexo-deployer-git插件"><a href="#4-安装hexo-deployer-git插件" class="headerlink" title="4.安装hexo-deployer-git插件"></a>4.安装hexo-deployer-git插件</h3><p><code>npm install --save hexo-deployer-git</code>，</p>
+<h3 id="5-配置ssh"><a href="#5-配置ssh" class="headerlink" title="5.配置ssh"></a>5.配置ssh</h3><p>先回到本地Hexo仓库设置用户名和邮箱，代码如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name “github注册名”</span><br><span class="line">git config --global user.email “github注册邮箱”</span><br></pre></td></tr></table></figure>
+<p>有两种连接方式https和ssh，ssh输入一次用户名和密码后以后就不需要再次输入了。</p>
+<p>在当前用户目录下写入以下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C</span><br></pre></td></tr></table></figure>
+<p>输入后一直按回车跳过输入密码等操作，然后将生成的密钥放到github网站里面（在setting里面找到SSH and GPG keys然后把密钥粘贴进去）</p>
+<p>然后测试和github的连接是否通常，代码如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<h3 id="6-即将大功告成"><a href="#6-即将大功告成" class="headerlink" title="6.即将大功告成"></a>6.即将大功告成</h3><p>输入以下命令</p>
+<p>server clean</p>
+<p>server g</p>
+<p>server d</p>
+<p>然后在浏览器中打开https://用户名.github.io/就可以看到自己的博客了。有的时候上传到github会有一点延迟。</p>
+
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2019/05/29/xxczlc1/" class="pre-post btn btn-default" title="学习成长历程20190529">
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">学习成长历程20190529</span>
+        </a>
+    
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+    <div id="vcomments" class="valine"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/assets/valine.min.js"></script>
+
+    <script>
+        new Valine({
+            av: AV,
+            el: '#vcomments',
+            appId: 'xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz',
+            appKey: 'erIpQac4azoCmgfBB7Dl9maa',
+            placeholder: '说点什么吧',
+            notify: false,
+            verify: false,
+            avatar: 'mm',
+            meta: 'nick,mail'.split(','),
+            pageSize: '10',
+            path: window.location.pathname,
+            lang: 'zh-Hans'.toLowerCase()
+        })
+    </script>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">Table of Contents</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#第一步：下载并安装Node-js和git"><span class="toc-text">第一步：下载并安装Node.js和git</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第二步：安装配置Hexo"><span class="toc-text">第二步：安装配置Hexo</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第三步：将Hexo部署到Github"><span class="toc-text">第三步：将Hexo部署到Github</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-登录github官网登录自己的账户，没有的话申请一个帐号然后登陆"><span class="toc-text">1.登录github官网登录自己的账户，没有的话申请一个帐号然后登陆</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-登录后新建一个仓库"><span class="toc-text">2.登录后新建一个仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-修改Hexo的配置文件"><span class="toc-text">3.修改Hexo的配置文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-安装hexo-deployer-git插件"><span class="toc-text">4.安装hexo-deployer-git插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-配置ssh"><span class="toc-text">5.配置ssh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-即将大功告成"><span class="toc-text">6.即将大功告成</span></a></li></ol></li></ol>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2017
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+</body>
+</html>
